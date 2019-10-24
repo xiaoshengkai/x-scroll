@@ -1,12 +1,17 @@
 var path = require('path')
 var webpack = require('webpack')
 
+const entry = process.env.NODE_ENV === 'production' ? './src/index.js' : './src/main.js'
+
 module.exports = {
-  entry: './src/main.js',
+  entry,
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'x-scroll.js',
+    library: 'XScroll',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -24,7 +29,7 @@ module.exports = {
           }
           // other vue-loader options go here
         }
-      },
+      }, 
       {
         test: /\.js$/,
         loader: 'babel-loader',
@@ -59,7 +64,6 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
