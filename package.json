@@ -1,10 +1,10 @@
 {
-  "name": "x-scroll",
+  "name": "xsk-scroll",
   "description": "上拉刷新下拉加载",
   "version": "0.0.1",
   "author": "xiaoshengkai <354830981@qq.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "main": "dist/x-scroll.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
