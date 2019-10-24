@@ -1,7 +1,7 @@
 {
   "name": "xsk-scroll",
   "description": "上拉刷新下拉加载",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "xiaoshengkai <354830981@qq.com>",
   "license": "MIT",
   "private": false,
